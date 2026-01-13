@@ -20,8 +20,6 @@ This project is a Slack clone built with Node.js, Express, and Socket.io. The go
 - Node.js
 - Express
 - Socket.io
-- MongoDB
-- Mongoose
 
 ## Getting Started
 
