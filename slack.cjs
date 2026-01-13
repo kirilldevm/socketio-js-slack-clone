@@ -12,7 +12,7 @@ const expressServer = app.listen(PORT, () => {
   console.log('Server running on ' + PORT);
 });
 
-export const io = socketio(expressServer);
+const io = socketio(expressServer);
 
 app.set('io', io);
 
