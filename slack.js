@@ -7,7 +7,11 @@ const namespaces = require('./data/namespaces');
 
 app.use(express.static(__dirname + '/public'));
 
-const expressServer = app.listen(9000);
+const PORT = process.env.PORT || 9000;
+const expressServer = app.listen(PORT, () => {
+  console.log('Server running on ' + PORT);
+});
+
 export const io = socketio(expressServer);
 
 app.set('io', io);

@@ -15,7 +15,9 @@ const clientOptions = {
   },
 };
 
-const socket = io('http://localhost:9000', clientOptions);
+const URL = process.env.APP_URL || 'http://localhost:9000';
+
+const socket = io(URL, clientOptions);
 
 //sockets will be put into this array, in the index of their ns.id
 const nameSpaceSockets = [];
@@ -77,7 +79,7 @@ socket.on('nsList', (nsData) => {
     nameSapcesDiv.innerHTML += `<div class="namespace" ns="${ns.endpoint}"><img src="${ns.image}"></div>`;
 
     if (!nameSpaceSockets[ns.id]) {
-      nameSpaceSockets[ns.id] = io(`http://localhost:9000${ns.endpoint}`);
+      nameSpaceSockets[ns.id] = io(`${URL}${ns.endpoint}`);
     }
     addListeners(ns.id);
   });
