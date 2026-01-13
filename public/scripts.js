@@ -15,7 +15,7 @@ const clientOptions = {
   },
 };
 
-const URL = process.env.APP_URL || 'http://localhost:9000';
+const URL = 'https://socketio-js-slack-clone.onrender.com';
 
 const socket = io(URL, clientOptions);
 

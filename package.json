@@ -2,6 +2,7 @@
   "name": "socketio-slack-clone",
   "version": "1.0.0",
   "main": "slack.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node slack.cjs",
