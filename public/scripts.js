@@ -1,4 +1,4 @@
-import io from 'socket.io';
+const { io } = require('../slack');
 
 const userName = prompt('What is your username?');
 const password = prompt('What is your password?');
