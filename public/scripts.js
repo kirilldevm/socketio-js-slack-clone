@@ -1,4 +1,4 @@
-import io from 'socket.io-client';
+import io from 'socket.io';
 
 const userName = prompt('What is your username?');
 const password = prompt('What is your password?');
